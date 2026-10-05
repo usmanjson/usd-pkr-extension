@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="color-scheme" content="light">
+  <title>USD ⇄ PKR</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main>
+    <section class="card">
+      <label class="row">
+        <span class="cur">
+          <span class="badge" id="badgeTop">$</span>
+          <span class="meta"><b id="codeTop">USD</b><small id="nameTop">US Dollar</small></span>
+        </span>
+        <input id="top" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="0" aria-label="Amount">
+      </label>
+
+      <div class="divider">
+        <button id="swap" type="button" aria-label="Swap currencies" title="Swap">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 13V3M2.5 5.5 5 3l2.5 2.5"/><path d="M11 3v10M8.5 10.5 11 13l2.5-2.5"/>
+          </svg>
+        </button>
+      </div>
+
+      <label class="row">
+        <span class="cur">
+          <span class="badge" id="badgeBottom">₨</span>
+          <span class="meta"><b id="codeBottom">PKR</b><small id="nameBottom">Pakistani Rupee</small></span>
+        </span>
+        <input id="bottom" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="0" aria-label="Converted amount">
+      </label>
+    </section>
+
+    <footer>
+      <p class="rate"><i class="dot" id="dot"></i><span id="rate">Loading rate…</span></p>
+      <p class="note" id="note"></p>
+    </footer>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>
